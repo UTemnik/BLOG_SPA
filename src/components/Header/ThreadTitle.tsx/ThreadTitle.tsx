@@ -3,7 +3,7 @@ import s from './threadTitle.css'
 
 const ThreadTitle = () => {
      return (
-          <h1 className={s.thredTitle}>ThreadTitle</h1>
+          <h1 className={s.threadTitle}>Header</h1>
      )
 }
 
