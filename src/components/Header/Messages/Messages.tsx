@@ -4,7 +4,7 @@ import s from './messages.css';
 const Messages = () => {
 	return (
 		<div className={s.messages}>
-			messages 
+			<span className={s.numberMessages}>4</span>
 			<svg
 				width="20"
 				height="16"

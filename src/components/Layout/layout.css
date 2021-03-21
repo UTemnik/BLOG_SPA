@@ -2,7 +2,6 @@
     max-width: 1400px;
     margin: 0 auto;
     background: #F4F4F4;
-    outline : 1px solid yellow;
 }
 
 @media (max-width: 1540px) {
@@ -13,11 +12,11 @@
 
 @media (max-width: 1024px) {
 	.layout {
-		max-width: 700px;
+		max-width: 600px;
 	}
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
 	.layout {
 		max-width: 320px;
 	}

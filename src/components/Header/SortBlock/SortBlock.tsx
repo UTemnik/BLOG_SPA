@@ -16,10 +16,12 @@ const SortBlock = () => {
 					fill="#CC6633"
 				/>
 			</svg>
-			<select className={s.select}>
+			<div className={s.selectBlock}>
+			<select className={s.select}>  
 				<option>Лучшие</option>
 				<option>Новые</option>
 			</select>
+           </div>
 		</div>
 	);
 };

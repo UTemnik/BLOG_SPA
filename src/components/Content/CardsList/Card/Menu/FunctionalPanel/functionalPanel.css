@@ -1,0 +1,30 @@
+.functionalPanel {
+	display: flex;
+    justify-content: space-between;
+	margin-left: 52px;
+    width: 100%;
+}
+
+.commentsBtn {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color : var(--greyC4);
+}
+
+.commentsBtn svg {
+    margin-right: 5px;
+}
+
+.statisticsBtn, .shareBtn {
+   margin-right: 20px;
+}
+
+@media (max-width: 1540px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 600px) {
+}

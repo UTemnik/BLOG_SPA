@@ -1,6 +1,6 @@
 import React from 'react'
-import s from './cardsList.css'
 import Card from './Card/Card'
+import s from './cardsList.css'
 
 
 const CardsList = () => {

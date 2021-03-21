@@ -1,5 +1,20 @@
-@media (min-width : 1024px) {
-    .cardsList {
-        padding: 40px 0;
-    }
+.cardsList {
+	padding: 47px 0 0 0;
+	background: var(--white);
+}
+
+@media (max-width: 1540px) {
+	.cardsList {
+		border-radius: 7px;
+		padding: 20px 0 0 0;
+	}
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 600px) {
+	.cardsList {
+		padding: 0;
+	}
 }

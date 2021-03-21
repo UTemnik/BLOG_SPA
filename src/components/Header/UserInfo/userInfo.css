@@ -10,9 +10,9 @@
 }
 
 .avatarBlock {
-    position: relative;
-    margin: 0px 12px 0 45px;
-    cursor: pointer;
+	position: relative;
+	margin: 0px 12px 0 45px;
+	cursor: pointer;
 }
 
 .avatarBlock:hover::before {
@@ -20,11 +20,11 @@
 	display: block;
 	position: absolute;
 	z-index: 2;
-    border: 1px solid var(--orange);
-    border-radius: 50%;
+	border: 1px solid var(--orange);
+	border-radius: 50%;
 	width: 60px;
 	height: 60px;
-	top:-6px;
+	top: -6px;
 	left: -6px;
 }
 
@@ -36,10 +36,21 @@
 }
 
 @media (max-width: 1540px) {
+	.avatarBlock {
+		margin: 0px 13px 0 30px;
+	}
 }
 
 @media (max-width: 1024px) {
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
+	.userName {
+		display: none;
+	}
+
+	.avatar {
+		width: 30px;
+		height: 30px;
+	}
 }

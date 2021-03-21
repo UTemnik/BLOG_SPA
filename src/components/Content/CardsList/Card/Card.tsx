@@ -1,24 +1,21 @@
-import React from 'react'
-import s from './card.css'
-
+import React from 'react';
+import s from './card.css';
+import Menu from './Menu/Menu';
+import TextContent from './TextContent/TextContent';
 
 const Card = () => {
-     return (
-           <li className={s.card}>
-                    <div className={s.textContent}>
-
-                        <h2>
-                            <a href="/" className={s.postLink}>
-                            Следует отметить, что новая модель организационной деятельности  Следует отметить, что новая модель организационной деятельности 
-                            </a>
-                        </h2>
-                    </div>
-                    <div className={s.preview}></div>
-                    <div className={s.menu}></div>
-                    <div className={s.controls}></div>
-                    апп
-           </li>
-     )
-}
+	return (
+		<li className={s.card}>
+			<a href="#blokId" className={s.linkBlock} />
+			<img
+				src="https://www.soyuz.ru/public/uploads/files/2/7397870/20191212152501852f43f3ba.jpg"
+				alt="picture"
+				className={s.picture}
+			/>
+            <TextContent />
+            <Menu />
+		</li>
+	);
+};
 
 export default Card;
