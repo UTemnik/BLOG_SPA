@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './threadTitle.css'
+import s from './threadTitle.less'
 
 const ThreadTitle = () => {
      return (

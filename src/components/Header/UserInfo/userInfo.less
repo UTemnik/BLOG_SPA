@@ -1,0 +1,46 @@
+.userInfo {
+	display: flex;
+	align-items: center;
+}
+
+.avatar {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	@media (max-width: 600px) {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+.avatarBlock {
+	position: relative;
+	margin: 0px 12px 0 45px;
+	cursor: pointer;
+	&:hover::before {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: 2;
+		border: 1px solid var(--orange);
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		top: -6px;
+		left: -6px;
+	}
+	@media (max-width: 1540px) {
+		margin: 0px 13px 0 30px;
+	}
+}
+
+.userName {
+	color: var(--orange);
+	font-weight: 500;
+	font-size: 20px;
+	cursor: pointer;
+
+	@media (max-width: 600px) {
+		display: none;
+	}
+}

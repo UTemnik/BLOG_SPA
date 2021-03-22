@@ -2,33 +2,22 @@
 	position: relative;
 	display: flex;
 	padding: 21px 60px 20px 60px;
-}
-
-.card:hover {
-	outline: 1px solid var(--greyD9);
-}
-
-@media (max-width: 1540px) {
-	.card {
+	&:hover {
+		outline: 1px solid var(--greyD9);
+	}
+	@media (max-width: 1540px) {
 		padding: 20px 40px 20px 40px;
 	}
-}
-
-@media (max-width: 1024px) {
-	.card {
+	@media (max-width: 1024px) {
 		padding: 20px 20px 20px 20px;
 	}
-}
-
-@media (max-width: 600px) {
-	.card {
+	@media (max-width: 600px) {
 		flex-direction: column;
 		padding: 22px 0 15px 0;
 		margin-bottom: 20px;
-	}
 
-	.card:hover {
-		outline: none;
+		&:hover {
+			outline: none;
+		}
 	}
-
 }

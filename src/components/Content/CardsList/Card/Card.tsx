@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './card.css';
+import s from './card.less';
 import Menu from './Menu/Menu';
 import PictureBlock from './PictureBlock/PictureBlock';
 import TextContent from './TextContent/TextContent';

@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './content.css'
+import s from './content.less'
 
 interface IContentProps {
     children? : React.ReactNode

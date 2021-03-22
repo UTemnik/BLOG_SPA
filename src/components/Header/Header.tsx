@@ -2,7 +2,7 @@ import React from 'react';
 import SearchBlock from './SearchBlock/SearchBlock';
 import SortBlock from './SortBlock/SortBlock';
 import ThreadTitle from './ThreadTitle.tsx/ThreadTitle';
-import s from './header.css';
+import s from './header.less';
 import Messages from './Messages/Messages';
 import UserInfo from './UserInfo/UserInfo';
 

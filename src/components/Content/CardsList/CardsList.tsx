@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from './Card/Card'
-import s from './cardsList.css'
+import s from './cardsList.less'
 
 
 const CardsList = () => {

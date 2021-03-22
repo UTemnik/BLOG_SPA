@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './sortBlock.css';
+import s from './sortBlock.less';
 
 const SortBlock = () => {
 	return (

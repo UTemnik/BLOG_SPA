@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './pictureBlock.css';
+import s from './pictureBlock.less';
 
 const PictureBlock = () => {
 	return (

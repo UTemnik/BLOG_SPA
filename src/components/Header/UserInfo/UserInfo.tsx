@@ -1,6 +1,6 @@
 import React from 'react';
 
-import s from './userInfo.css';
+import s from './userInfo.less';
 
 const UserInfo = () => {
 	return (

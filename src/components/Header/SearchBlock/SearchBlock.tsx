@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './searchBlock.css';
+import s from './searchBlock.less';
 
 const SearchBlock = () => {
 	return (

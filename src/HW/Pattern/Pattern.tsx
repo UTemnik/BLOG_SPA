@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './pattern.css'
+import s from './pattern.less'
 
 const Pattern = () => {
      return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './textContent.css';
+import s from './textContent.less';
 
 const TextContent = () => {
 	return (

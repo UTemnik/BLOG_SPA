@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './messages.css';
+import s from './messages.less';
 
 const Messages = () => {
 	return (

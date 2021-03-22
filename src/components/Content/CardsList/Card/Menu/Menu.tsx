@@ -1,6 +1,6 @@
 import React from 'react';
 import FunctionalPanel from './FunctionalPanel/FunctionalPanel';
-import s from './menu.css';
+import s from './menu.less';
 
 const Menu = () => {
 	return (

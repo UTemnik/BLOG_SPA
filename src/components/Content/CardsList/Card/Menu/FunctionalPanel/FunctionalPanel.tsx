@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './functionalPanel.css';
+import s from './functionalPanel.less';
 
 const FunctionalPanel = () => {
 	return (

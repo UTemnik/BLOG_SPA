@@ -1,0 +1,138 @@
+.title {
+	margin-top: 12px;
+	line-height: 18px;
+	@media (max-width: 1540px) {
+		margin-top: 10px;
+	}
+	@media (max-width: 1024px) {
+		margin-top: 0;
+	}
+}
+
+.postLink {
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	font-size: 20px;
+	font-weight: normal;
+	padding-bottom: 10px;
+	position: relative;
+	z-index: 22;
+	&:hover {
+		color: var(--orange);
+	}
+	@media (max-width: 1540px) {
+		padding-bottom: 8px;
+	}
+	@media (max-width: 1024px) {
+		padding-bottom: 0;
+	}
+	@media (max-width: 600px) {
+		display: block;
+		font-size: 16px;
+		line-height: 19px;
+		margin-bottom: 13px;
+	}
+}
+
+.publicationInfo {
+	display: flex;
+	align-items: center;
+	margin-bottom: 12px;
+	@media (max-width: 1024px) {
+		align-items: flex-start;
+		flex-direction: column;
+		margin-bottom: 5px;
+	}
+	@media (max-width: 600px) {
+		align-items: center;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		margin-bottom: 5px;
+	}
+}
+
+.publicationTime {
+	color: var(--grey99);
+	@media (max-width: 1024px) {
+		display: none;
+	}
+	@media (max-width: 600px) {
+		display: block;
+		font-size: 10px;
+	}
+}
+
+.authorPhoto {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin: 0 7px 0 6px;
+	@media (max-width: 1024px) {
+		margin-left: 0;
+	}
+	@media (max-width: 600px) {
+		margin: 0 7px 0 0;
+	}
+}
+
+.authorName {
+	position: relative;
+	z-index: 22;
+	color: var(--orange);
+	&:hover::after {
+		content: '';
+		position: absolute;
+		z-index: 23;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: -3px;
+		width: 100%;
+		border-bottom: 1px solid var(--orange);
+	}
+	@media (max-width: 600px) {
+		font-size: 10px;
+		margin-right: 6px;
+	}
+}
+
+.author {
+	display: flex;
+	align-items: center;
+	@media (max-width: 1024px) {
+		margin: 15px 0 5px 0;
+	}
+	@media (max-width: 600px) {
+		margin: 0;
+		align-items: center;
+	}
+}
+
+.publicationViews {
+	margin-bottom: 12px;
+	@media (max-width: 600px) {
+		display: none;
+	}
+}
+
+.timeViews {
+	margin-left: 4px;
+	color: var(--grey99);
+}
+
+.textContent {
+	@media (max-width: 600px) {
+		order: -1;
+		display: flex;
+		flex-direction: column-reverse;
+		padding: 0 20px;
+	}
+}
+
+.wordPublished {
+	@media (max-width: 600px) {
+		display: none;
+	}
+}
