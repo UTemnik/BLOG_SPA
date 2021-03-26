@@ -1,21 +1,31 @@
 import React from 'react';
 
 interface IItem {
-	value : string;
-	id : string;
+	text: string;
+	key: string;
+	onClick: (key: string) => void;
+	className?: string;
+	As?: 'a' | 'li' | 'button' | 'div';
+	href?: string;
 }
 
-interface IMyListProps {
-	list : IItem[];
-	onClick : (id:string) => void;
+interface IGenericListProps {
+	list: IItem[];
 }
 
-export const MyList = ({list, onClick} : IMyListProps) => {
+export const GenericList = ({ list }: IGenericListProps) => {
 	return (
-		<ul>
-            {list.map((item : IItem) => (
-                 <li onClick={() => onClick(item.id)} key={item.id}>{item.value}</li>
+		<>
+			{list.map(({ As = 'div', text, onClick, className, key, href }) => (
+				<As
+					className={className}
+					onClick={() => onClick(key)}
+					key={key}
+					href={href}
+				>
+					{text}
+				</As>
 			))}
-		</ul>
-	)
-}
+		</>
+	);
+};
