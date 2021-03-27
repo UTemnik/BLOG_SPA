@@ -21,9 +21,7 @@ const Dropdown = ({
 	const [isDropdownOpen, setIsDropdownOpen] = useState(isOpen);
 
 	const handleOpen = () => {
-		if (isOpen === undefined) {
 			setIsDropdownOpen(!isDropdownOpen);
-		}
 	};
 
 	useEffect(() => {
