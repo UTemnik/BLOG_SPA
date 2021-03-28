@@ -1,9 +1,6 @@
 import React from 'react';
-import ShareIcon from './../../../../../../Icons/ShareIcon';
-import CommentsIcon from './../../../../../../Icons/CommentsIcon';
 import s from './dropdownMenu.less';
-import HideIcon from './../../../../../../Icons/HideIcon';
-import SaveIcon from './../../../../../../Icons/SaveIcon';
+import { EIcons, Icon } from './../../../../../../Icons/Icon';
 
 interface IDropdownMenuProps {
 	postId?: string;
@@ -14,23 +11,23 @@ const DropdownMenu = ({ postId }: IDropdownMenuProps) => {
 		<div className={s.container}>
 			<ul className={s.list}>
 				<li className={s.comments}>
-					<CommentsIcon />
+					<Icon name={EIcons.comments} sizeW={15} sizeH={15} />
 					Комментарии
 				</li>
 				<li className={s.share}>
-					<ShareIcon />
+					<Icon name={EIcons.share} sizeW={12} sizeH={14} />
 					Поделиться
 				</li>
 				<li className={s.hide}>
-					<HideIcon />
+					<Icon name={EIcons.hide} sizeW={14} sizeH={14} />
 					Скрыть
 				</li>
 				<li className={s.save}>
-					<SaveIcon />
+					<Icon name={EIcons.save} sizeW={14} sizeH={14} />
 					Сохранить
 				</li>
 				<li className={s.complain}>
-					<CommentsIcon />
+					<Icon name={EIcons.complain} sizeW={16} sizeH={14} />
 					Пожаловаться
 				</li>
 				<li className={s.closeElem}>

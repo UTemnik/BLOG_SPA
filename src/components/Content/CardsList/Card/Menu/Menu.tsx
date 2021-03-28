@@ -1,11 +1,10 @@
 import React from 'react';
 import MenuIcon from './../../../../../Icons/MenuIcon';
-import UpIcon from './../../../../../Icons/UpIcon';
 import Dropdown from './../../../../../common/Dropdown/Dropdown';
 import DropdownMenu from './DropdownMenu/DropdowmMenu';
 import FunctionalPanel from './FunctionalPanel/FunctionalPanel';
 import s from './menu.less';
-import DownIcon from './../../../../../Icons/DownIcon';
+import { EIcons, Icon } from './../../../../../Icons/Icon';
 
 const Menu = () => {
 	return (
@@ -24,12 +23,12 @@ const Menu = () => {
 			</div>
 			<div className={s.statistics}>
 				<button>
-					<UpIcon />
+					<Icon name={EIcons.up} sizeW={19} sizeH={10} className={s.upCounter} />
 				</button>
 
 				<span className={s.appraisal}>325</span>
 				<button>
-					<DownIcon />
+				<Icon name={EIcons.down} sizeW={19} sizeH={10} className={s.downCounter} />
 				</button>
 			</div>
 

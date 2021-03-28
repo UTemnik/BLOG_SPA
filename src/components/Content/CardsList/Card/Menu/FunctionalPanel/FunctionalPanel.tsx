@@ -1,26 +1,23 @@
 import React from 'react';
-import StatisticsIcon from './../../../../../../Icons/StatisticsIcon';
-import CommentsIcon from './../../../../../../Icons/CommentsIcon';
 import s from './functionalPanel.less';
-import ShareNotGroundIcon from './../../../../../../Icons/ShareNotGroundIcon';
-import DeleteIcon from './../../../../../../Icons/DeleteIcon';
+import { EIcons, Icon } from './../../../../../../Icons/Icon';
 
 const FunctionalPanel = () => {
 	return (
 		<div className={s.functionalPanel}>
 			<button className={s.commentsBtn}>
-				<CommentsIcon />
+				<Icon name={EIcons.comments} sizeW={14} sizeH={14} />
 				14
 			</button>
 			<div className={s.actionButtons}>
 				<button className={s.statisticsBtn}>
-					<StatisticsIcon />
+					<Icon name={EIcons.statistics} sizeW={20} sizeH={20} />
 				</button>
 				<button className={s.shareBtn}>
-					<ShareNotGroundIcon />
+					<Icon name={EIcons.shareNotGround} sizeW={20} sizeH={20} />
 				</button>
 				<button className={s.deleteBtn}>
-					<DeleteIcon />
+					<Icon name={EIcons.delete} sizeW={20} sizeH={20} />
 				</button>
 			</div>
 		</div>

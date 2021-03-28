@@ -30,19 +30,3 @@ export const GenericList = ({ list }: IGenericListProps) => {
 	);
 };
 
-//-----моё----
-
-/* interface ITextProps {
-	Text?: 'p' | 'li' | 'span' | 'div';
-	key?: 'string';
-	text: string;
-}
-
-export const Text = ({ Text = 'div', key, text }: ITextProps) => {
-	return (
-		<>
-			<Text>{text}</Text>
-		</>
-	);
-};
- */
