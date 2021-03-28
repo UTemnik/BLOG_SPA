@@ -7,11 +7,15 @@ export const EIcons = {
 	down: 'down',
 	hide: 'hide',
 	menu: 'menu',
+	messages: 'messages',
 	save: 'save',
 	share: 'share',
 	shareNotGround: 'shareNotGround',
+	search: 'search',
 	statistics: 'statistics',
 	up: 'up',
+	views: 'views',
+	rocket: 'rocket',
 };
 
 interface IIconProps {
@@ -23,10 +27,14 @@ interface IIconProps {
 		| typeof EIcons['hide']
 		| typeof EIcons['menu']
 		| typeof EIcons['save']
+		| typeof EIcons['search']
 		| typeof EIcons['share']
 		| typeof EIcons['shareNotGround']
 		| typeof EIcons['statistics']
-		| typeof EIcons['up'];
+		| typeof EIcons['rocket']
+		| typeof EIcons['up']
+		| typeof EIcons['views']
+		| typeof EIcons['messages'];
 	sizeW: number;
 	sizeH: number;
 	className?: string;
@@ -206,6 +214,70 @@ export const Icon = ({ name, sizeW, sizeH, className }: IIconProps) => {
 					xmlns="http://www.w3.org/2000/svg"
 				>
 					<path d="M9.5 0L0 10H19L9.5 0Z" fill="#D9D9D9" />
+				</svg>
+			);
+			break;
+		case 'views':
+			result = (
+				<svg
+					width={sizeW}
+					height={sizeH}
+					viewBox="0 0 16 11"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M8 0C4.36364 0 1.25818 2.28067 0 5.5C1.25818 8.71933 4.36364 11 8 11C11.6364 11 14.7418 8.71933 16 5.5C14.7418 2.28067 11.6364 0 8 0ZM8 9.16667C5.99273 9.16667 4.36364 7.524 4.36364 5.5C4.36364 3.476 5.99273 1.83333 8 1.83333C10.0073 1.83333 11.6364 3.476 11.6364 5.5C11.6364 7.524 10.0073 9.16667 8 9.16667ZM8 3.3C6.79273 3.3 5.81818 4.28267 5.81818 5.5C5.81818 6.71733 6.79273 7.7 8 7.7C9.20727 7.7 10.1818 6.71733 10.1818 5.5C10.1818 4.28267 9.20727 3.3 8 3.3Z"
+						fill="#999999"
+					/>
+				</svg>
+			);
+			break;
+		case 'messages':
+			result = (
+				<svg
+					width={sizeW}
+					height={sizeH}
+					viewBox="0 0 20 16"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z"
+						fill="#CC6633"
+					/>
+				</svg>
+			);
+			break;
+		case 'search':
+			result = (
+				<svg
+					width={sizeW}
+					height={sizeH}
+					viewBox="0 0 19 19"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M13.5792 11.9497H12.721L12.4168 11.6564C13.4814 10.418 14.1224 8.81018 14.1224 7.06118C14.1224 3.16124 10.9611 0 7.06118 0C3.16124 0 0 3.16124 0 7.06118C0 10.9611 3.16124 14.1224 7.06118 14.1224C8.81018 14.1224 10.418 13.4814 11.6564 12.4168L11.9497 12.721V13.5792L17.3814 19L19 17.3814L13.5792 11.9497ZM7.06118 11.9497C4.3562 11.9497 2.17267 9.76615 2.17267 7.06118C2.17267 4.3562 4.3562 2.17267 7.06118 2.17267C9.76615 2.17267 11.9497 4.3562 11.9497 7.06118C11.9497 9.76615 9.76615 11.9497 7.06118 11.9497Z"
+						fill="#C4C4C4"
+					/>
+				</svg>
+			);
+			break;
+		case 'rocket':
+			result = (
+				<svg
+					width={sizeW}
+					height={sizeH}
+					viewBox="0 0 14 16"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M14 16L10.6225 14.76C11.235 13.536 11.6725 12.272 11.9437 10.984L14 16ZM3.3775 14.76L0 16L2.05625 10.984C2.3275 12.272 2.765 13.536 3.3775 14.76ZM7 0C7 0 11.375 1.6 11.375 8C11.375 10.48 10.7188 12.6 9.91375 14.264C9.625 14.84 9.00375 15.2 8.3125 15.2H5.6875C4.99625 15.2 4.375 14.84 4.08625 14.264C3.29 12.6 2.625 10.48 2.625 8C2.625 1.6 7 0 7 0ZM7 8C7.9625 8 8.75 7.28 8.75 6.4C8.75 5.52 7.9625 4.8 7 4.8C6.0375 4.8 5.25 5.52 5.25 6.4C5.25 7.28 6.0375 8 7 8Z"
+						fill="#CC6633"
+					/>
 				</svg>
 			);
 			break;

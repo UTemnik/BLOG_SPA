@@ -1,5 +1,4 @@
 import React from 'react';
-import MenuIcon from './../../../../../Icons/MenuIcon';
 import Dropdown from './../../../../../common/Dropdown/Dropdown';
 import DropdownMenu from './DropdownMenu/DropdowmMenu';
 import FunctionalPanel from './FunctionalPanel/FunctionalPanel';
@@ -14,7 +13,7 @@ const Menu = () => {
 					isOpen={false}
 					button={
 						<button className={s.menuButton}>
-							<MenuIcon />
+							<Icon name={EIcons.menu} sizeW={5} sizeH={20} />
 						</button>
 					}
 				>
@@ -28,7 +27,7 @@ const Menu = () => {
 
 				<span className={s.appraisal}>325</span>
 				<button>
-				<Icon name={EIcons.down} sizeW={19} sizeH={10} className={s.downCounter} />
+					<Icon name={EIcons.down} sizeW={19} sizeH={10} className={s.downCounter} />
 				</button>
 			</div>
 
