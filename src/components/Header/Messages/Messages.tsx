@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, EIcons } from '../../../globalStyles/Icons/Icon';
+import { Icon, EIcons } from '../../../common/Icons/Icon';
 import s from './messages.less';
 
 const Messages = () => {

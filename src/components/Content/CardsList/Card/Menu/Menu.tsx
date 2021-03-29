@@ -3,7 +3,7 @@ import Dropdown from './../../../../../common/Dropdown/Dropdown';
 import DropdownMenu from './DropdownMenu/DropdowmMenu';
 import FunctionalPanel from './FunctionalPanel/FunctionalPanel';
 import s from './menu.less';
-import { EIcons, Icon } from '../../../../../globalStyles/Icons/Icon';
+import { EIcons, Icon } from '../../../../../common/Icons/Icon';
 
 const Menu = () => {
 	return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './dropdownMenu.less';
-import { EIcons, Icon } from '../../../../../../globalStyles/Icons/Icon';
+import { EIcons, Icon } from '../../../../../../common/Icons/Icon';
 
 interface IDropdownMenuProps {
 	postId?: string;

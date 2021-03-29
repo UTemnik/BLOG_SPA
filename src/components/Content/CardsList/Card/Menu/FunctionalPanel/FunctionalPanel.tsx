@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './functionalPanel.less';
-import { EIcons, Icon } from '../../../../../../globalStyles/Icons/Icon';
+import { EIcons, Icon } from '../../../../../../common/Icons/Icon';
 
 const FunctionalPanel = () => {
 	return (
