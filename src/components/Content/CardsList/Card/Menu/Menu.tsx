@@ -3,7 +3,7 @@ import Dropdown from './../../../../../common/Dropdown/Dropdown';
 import DropdownMenu from './DropdownMenu/DropdowmMenu';
 import FunctionalPanel from './FunctionalPanel/FunctionalPanel';
 import s from './menu.less';
-import { EIcons, Icon } from './../../../../../Icons/Icon';
+import { EIcons, Icon } from '../../../../../globalStyles/Icons/Icon';
 
 const Menu = () => {
 	return (
@@ -13,7 +13,7 @@ const Menu = () => {
 					isOpen={false}
 					button={
 						<button className={s.menuButton}>
-							<Icon name={EIcons.menu} sizeW={5} sizeH={20} />
+							<Icon name={EIcons.menu} size={[5, 20]} />
 						</button>
 					}
 				>
@@ -22,12 +22,12 @@ const Menu = () => {
 			</div>
 			<div className={s.statistics}>
 				<button>
-					<Icon name={EIcons.up} sizeW={19} sizeH={10} className={s.upCounter} />
+					<Icon name={EIcons.up} size={[19, 10]} className={s.upCounter} />
 				</button>
 
 				<span className={s.appraisal}>325</span>
 				<button>
-					<Icon name={EIcons.down} sizeW={19} sizeH={10} className={s.downCounter} />
+					<Icon name={EIcons.down} size={[19, 10]} className={s.downCounter} />
 				</button>
 			</div>
 

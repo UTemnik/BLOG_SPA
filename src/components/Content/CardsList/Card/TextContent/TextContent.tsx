@@ -1,5 +1,5 @@
 import React from 'react';
-import { EIcons, Icon } from './../../../../../Icons/Icon';
+import { EIcons, Icon } from '../../../../../globalStyles/Icons/Icon';
 import s from './textContent.less';
 
 const TextContent = () => {
@@ -31,7 +31,7 @@ const TextContent = () => {
 					</div>
 				</div>
 				<div className={s.publicationViews}>
-					<Icon name={EIcons.views} sizeW={16} sizeH={11} />
+					<Icon name={EIcons.views} size={[16, 11]} />
 					<span className={s.timeViews}>1 час назад</span>
 				</div>
 			</div>

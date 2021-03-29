@@ -1,53 +1,37 @@
 import React from 'react';
 
-export const EIcons = {
-	comments: 'comments',
-	complain: 'complain',
-	delete: 'delete',
-	down: 'down',
-	hide: 'hide',
-	menu: 'menu',
-	messages: 'messages',
-	save: 'save',
-	share: 'share',
-	shareNotGround: 'shareNotGround',
-	search: 'search',
-	statistics: 'statistics',
-	up: 'up',
-	views: 'views',
-	rocket: 'rocket',
-};
+export enum EIcons {
+	comments = 'comments',
+	complain = 'complain',
+	delete = 'delete',
+	down = 'down',
+	hide = 'hide',
+	menu = 'menu',
+	messages = 'messages',
+	save = 'save',
+	share = 'share',
+	shareNotGround = 'shareNotGround',
+	search = 'search',
+	statistics = 'statistics',
+	up = 'up',
+	views = 'views',
+	rocket = 'rocket',
+}
 
 interface IIconProps {
-	name:
-		| typeof EIcons['delete']
-		| typeof EIcons['comments']
-		| typeof EIcons['comments']
-		| typeof EIcons['down']
-		| typeof EIcons['hide']
-		| typeof EIcons['menu']
-		| typeof EIcons['save']
-		| typeof EIcons['search']
-		| typeof EIcons['share']
-		| typeof EIcons['shareNotGround']
-		| typeof EIcons['statistics']
-		| typeof EIcons['rocket']
-		| typeof EIcons['up']
-		| typeof EIcons['views']
-		| typeof EIcons['messages'];
-	sizeW: number;
-	sizeH: number;
+	name: EIcons;
+	size: [number, number];
 	className?: string;
 }
 
-export const Icon = ({ name, sizeW, sizeH, className }: IIconProps) => {
+export const Icon = ({ name, className, size = [0, 0] }: IIconProps) => {
 	let result;
 	switch (name) {
 		case 'comments':
 			result = (
 				<svg
-					width={sizeW}
-					height={sizeH}
+					width={size[0]}
+					height={size[1]}
 					viewBox="0 0 15 15"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
@@ -62,8 +46,8 @@ export const Icon = ({ name, sizeW, sizeH, className }: IIconProps) => {
 		case 'delete':
 			result = (
 				<svg
-					width={sizeW}
-					height={sizeH}
+					width={size[0]}
+					height={size[1]}
 					viewBox="0 0 20 20"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
@@ -79,8 +63,8 @@ export const Icon = ({ name, sizeW, sizeH, className }: IIconProps) => {
 		case 'complain':
 			result = (
 				<svg
-					width={sizeW}
-					height={sizeH}
+					width={size[0]}
+					height={size[1]}
 					viewBox="0 0 16 14"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
@@ -96,8 +80,8 @@ export const Icon = ({ name, sizeW, sizeH, className }: IIconProps) => {
 			result = (
 				<svg
 					className={className}
-					width={sizeW}
-					height={sizeH}
+					width={size[0]}
+					height={size[1]}
 					viewBox="0 0 19 10"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
@@ -109,8 +93,8 @@ export const Icon = ({ name, sizeW, sizeH, className }: IIconProps) => {
 		case 'hide':
 			result = (
 				<svg
-					width={sizeW}
-					height={sizeH}
+					width={size[0]}
+					height={size[1]}
 					viewBox="0 0 14 14"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
@@ -125,8 +109,8 @@ export const Icon = ({ name, sizeW, sizeH, className }: IIconProps) => {
 		case 'menu':
 			result = (
 				<svg
-					width={sizeW}
-					height={sizeH}
+					width={size[0]}
+					height={size[1]}
 					viewBox="0 0 5 20"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
@@ -140,8 +124,8 @@ export const Icon = ({ name, sizeW, sizeH, className }: IIconProps) => {
 		case 'save':
 			result = (
 				<svg
-					width={sizeW}
-					height={sizeH}
+					width={size[0]}
+					height={size[1]}
 					viewBox="0 0 14 14"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
@@ -156,8 +140,8 @@ export const Icon = ({ name, sizeW, sizeH, className }: IIconProps) => {
 		case 'share':
 			result = (
 				<svg
-					width={sizeW}
-					height={sizeH}
+					width={size[0]}
+					height={size[1]}
 					viewBox="0 0 12 14"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
@@ -172,8 +156,8 @@ export const Icon = ({ name, sizeW, sizeH, className }: IIconProps) => {
 		case 'shareNotGround':
 			result = (
 				<svg
-					width={sizeW}
-					height={sizeH}
+					width={size[0]}
+					height={size[1]}
 					viewBox="0 0 20 20"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
@@ -189,8 +173,8 @@ export const Icon = ({ name, sizeW, sizeH, className }: IIconProps) => {
 		case 'statistics':
 			result = (
 				<svg
-					width={sizeW}
-					height={sizeH}
+					width={size[0]}
+					height={size[1]}
 					viewBox="0 0 20 20"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
@@ -207,8 +191,8 @@ export const Icon = ({ name, sizeW, sizeH, className }: IIconProps) => {
 			result = (
 				<svg
 					className={className}
-					width={sizeW}
-					height={sizeH}
+					width={size[0]}
+					height={size[1]}
 					viewBox="0 0 19 10"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
@@ -220,8 +204,8 @@ export const Icon = ({ name, sizeW, sizeH, className }: IIconProps) => {
 		case 'views':
 			result = (
 				<svg
-					width={sizeW}
-					height={sizeH}
+					width={size[0]}
+					height={size[1]}
 					viewBox="0 0 16 11"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
@@ -236,8 +220,8 @@ export const Icon = ({ name, sizeW, sizeH, className }: IIconProps) => {
 		case 'messages':
 			result = (
 				<svg
-					width={sizeW}
-					height={sizeH}
+					width={size[0]}
+					height={size[1]}
 					viewBox="0 0 20 16"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
@@ -252,8 +236,8 @@ export const Icon = ({ name, sizeW, sizeH, className }: IIconProps) => {
 		case 'search':
 			result = (
 				<svg
-					width={sizeW}
-					height={sizeH}
+					width={size[0]}
+					height={size[1]}
 					viewBox="0 0 19 19"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
@@ -268,8 +252,8 @@ export const Icon = ({ name, sizeW, sizeH, className }: IIconProps) => {
 		case 'rocket':
 			result = (
 				<svg
-					width={sizeW}
-					height={sizeH}
+					width={size[0]}
+					height={size[1]}
 					viewBox="0 0 14 16"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"

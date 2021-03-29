@@ -4,8 +4,8 @@ import CardsList from './components/Content/CardsList/CardsList';
 import Content from './components/Content/Content';
 import Header from './components/Header/Header';
 import Layout from './components/Layout/Layout';
-import './config.less';
-
+import Text, { EColors } from './globalStyles/Text/Text';
+import './globalStyles/config.less';
 
 function AppComponent() {
 	return (
