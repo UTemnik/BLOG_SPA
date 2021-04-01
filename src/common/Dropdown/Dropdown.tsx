@@ -33,7 +33,7 @@ const Dropdown = ({
 	}, [isDropdownOpen]);
 
 	return (
-		<div className={s.conteiner}>
+		<div className={s.container}>
 			<div onClick={handleOpen}>{button}</div>
 			{isDropdownOpen && (
 				<div className={s.listContainer}>
