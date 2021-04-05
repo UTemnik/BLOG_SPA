@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import SearchBlock from './SearchBlock/SearchBlock';
 import SortBlock from './SortBlock/SortBlock';
 import ThreadTitle from './ThreadTitle.tsx/ThreadTitle';
@@ -6,13 +6,11 @@ import s from './header.less';
 import Messages from './Messages/Messages';
 import UserInfo from './UserInfo/UserInfo';
 import { useUserData } from './../../hooks/useUserData';
+import { TokenContext } from './../../context/tokenContext';
 
-interface IHeaderProps {
-  accessToken: string;
-}
+const Header = () => {
 
-const Header = ({ accessToken }: IHeaderProps) => {
-
+  const accessToken = useContext(TokenContext);
   const [data] = useUserData(accessToken);
 
   return (
