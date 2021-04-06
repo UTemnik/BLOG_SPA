@@ -1,29 +1,29 @@
-import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react';
-import { tokenContext } from './../../../context/tokenContext';
+import React, { useContext } from 'react';
 import Card from './Card/Card';
 import s from './cardsList.less';
+import {
+  IPostsContextData,
+  postsContext,
+} from './../../../context/PostsContext';
 
 const CardsList = () => {
-  const accessToken = useContext(tokenContext);
-  const [posts, setPosts] = useState('');
-
-  useEffect(() => {
-    axios
-      .get('https://oauth.reddit.com/r/redditdev/best', {
-        headers: { Authorization: `bearer ${accessToken}` },
-      })
-      .then((response) => {
-        setPosts(response.data);
-      })
-      .catch(console.log);
-  }, []);
-
-  console.log(posts);
+  const posts = useContext(postsContext);
 
   return (
     <ul className={s.cardsList}>
-      <Card />
+      {!!posts
+        ? posts.map((elem: IPostsContextData) => {
+            return (
+              <Card
+                imgSrc={elem.data['thumbnail']}
+                key={elem.data.id}
+                author={elem.data['author']}
+                title={elem.data['title']}
+                rating={elem.data['total_awards_received']}
+              />
+            );
+          })
+        : null}
     </ul>
   );
 };

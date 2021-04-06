@@ -1,4 +1,4 @@
-import axios from 'axios';
+import superagent from 'superagent';
 import { useState, useEffect, useContext } from 'react';
 import { tokenContext } from './../context/tokenContext';
 
@@ -12,15 +12,14 @@ export function useUserData() {
   const [data, setData] = useState<IUserData>({});
 
   useEffect(() => {
-    axios
-      .get('https://oauth.reddit.com/api/v1/me', {
-        headers: { Authorization: `bearer ${accessToken}` },
-      })
+    superagent
+      .get('https://oauth.reddit.com/api/v1/me')
+      .set({ Authorization: `bearer ${accessToken}` })
       .then((response) => {
-        const userData = response.data;
+        const userData = response.body;
         setData({ userName: userData.name, iconImg: userData.icon_img });
       })
-      .catch(console.log);
+      .catch((err) => console.log(err));
   }, [accessToken]);
 
   return [data];

@@ -26,9 +26,7 @@ const UserInfo = ({ iconImg, userName }: IUserInfo) => {
               <Icon name={EIcons.anonim} size={[50, 50]} />
             )}
           </div>
-          <Text size={20} color={EColors.grey99}>
-            {userName || 'Аноним'}
-          </Text>
+          <div className={s.userName}>{userName || 'Аноним'}</div>
         </div>
       </a>
     </>

@@ -8,6 +8,7 @@ import { useToken } from './hooks/useToken';
 import { tokenContext } from './context/tokenContext';
 import { UserContextProvider } from './context/userContext';
 import './../global.less';
+import { PostsContextProvider } from './context/PostsContext';
 
 function AppComponent() {
   const [accessToken] = useToken();
@@ -15,12 +16,14 @@ function AppComponent() {
   return (
       <tokenContext.Provider value={accessToken}>
         <UserContextProvider>
+          <PostsContextProvider>
           <Layout>
             <Header />
             <Content>
               <CardsList />
             </Content>
           </Layout>
+          </PostsContextProvider>
         </UserContextProvider>
       </tokenContext.Provider>
   );
