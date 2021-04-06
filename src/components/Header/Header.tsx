@@ -5,13 +5,11 @@ import ThreadTitle from './ThreadTitle.tsx/ThreadTitle';
 import s from './header.less';
 import Messages from './Messages/Messages';
 import UserInfo from './UserInfo/UserInfo';
-import { useUserData } from './../../hooks/useUserData';
-import { TokenContext } from './../../context/tokenContext';
+import { userContext } from './../../context/userContext';
 
 const Header = () => {
 
-  const accessToken = useContext(TokenContext);
-  const [data] = useUserData(accessToken);
+  const {iconImg, userName} = useContext(userContext);
 
   return (
     <header className={s.header}>
@@ -19,7 +17,7 @@ const Header = () => {
       <ThreadTitle />
       <Messages />
       <SearchBlock />
-      <UserInfo iconImg={data.iconImg} userName={data.userName} />
+      <UserInfo iconImg={iconImg} userName={userName} />
     </header>
   );
 };

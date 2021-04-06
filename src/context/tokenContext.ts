@@ -1,4 +1,4 @@
 import React from 'react';
 
-export const TokenContext = React.createContext('');
+export const tokenContext = React.createContext('');
 

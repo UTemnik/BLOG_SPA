@@ -5,24 +5,24 @@ import Content from './components/Content/Content';
 import Header from './components/Header/Header';
 import Layout from './components/Layout/Layout';
 import { useToken } from './hooks/useToken';
-import { TokenContext } from './context/tokenContext';
+import { tokenContext } from './context/tokenContext';
+import { UserContextProvider } from './context/userContext';
 import './../global.less';
 
 function AppComponent() {
   const [accessToken] = useToken();
-  const {Provider} = TokenContext;
 
   return (
-    <>
-      <Provider value={accessToken}>
-        <Layout>
-          <Header />
-          <Content>
-            <CardsList />
-          </Content>
-        </Layout>
-      </Provider>
-    </>
+      <tokenContext.Provider value={accessToken}>
+        <UserContextProvider>
+          <Layout>
+            <Header />
+            <Content>
+              <CardsList />
+            </Content>
+          </Layout>
+        </UserContextProvider>
+      </tokenContext.Provider>
   );
 }
 
