@@ -12,20 +12,19 @@ import { PostsContextProvider } from './context/PostsContext';
 
 function AppComponent() {
   const [accessToken] = useToken();
-
   return (
-      <tokenContext.Provider value={accessToken}>
-        <UserContextProvider>
-          <PostsContextProvider>
+    <tokenContext.Provider value={accessToken}>
+      <UserContextProvider>
+        <PostsContextProvider>
           <Layout>
             <Header />
             <Content>
               <CardsList />
             </Content>
           </Layout>
-          </PostsContextProvider>
-        </UserContextProvider>
-      </tokenContext.Provider>
+        </PostsContextProvider>
+      </UserContextProvider>
+    </tokenContext.Provider>
   );
 }
 

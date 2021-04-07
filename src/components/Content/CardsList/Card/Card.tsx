@@ -8,14 +8,15 @@ interface ICard {
   imgSrc?: string;
   title?: string;
   author: string;
+  authorImg : string;
   rating: number;
 }
 
-const Card = ({ imgSrc, author, title, rating }: ICard) => {
+const Card = ({ imgSrc, author, title, rating, authorImg }: ICard) => {
   return (
     <li className={s.card}>
       <PictureBlock imgSrc={imgSrc} />
-      <TextContent author={author} title={title} />
+      <TextContent author={author} title={title} authorImg={authorImg} />
       <Menu rating={rating} />
     </li>
   );

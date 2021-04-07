@@ -1,5 +1,4 @@
 import React from 'react';
-import Text, { EColors } from './../../../common/Text/Text';
 import { Icon, EIcons } from './../../../common/Icons/Icon';
 
 import s from './userInfo.less';
@@ -10,6 +9,7 @@ interface IUserInfo {
 }
 
 const UserInfo = ({ iconImg, userName }: IUserInfo) => {
+
   const CLIENT_ID = 'NZI7wqgUP_0uFw';
   const TYPE = 'token';
   const URI = 'http://localhost:3000';

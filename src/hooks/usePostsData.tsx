@@ -10,6 +10,7 @@ export function usePostsData() {
 
   useEffect(() => {
     superagent
+      /*      .get('https://oauth.reddit.com/hot.json')*/
       .get('https://oauth.reddit.com/top.json')
       .set({ Authorization: `bearer ${accessToken}` })
       .query({ limit: '5' })

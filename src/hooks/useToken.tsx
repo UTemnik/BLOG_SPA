@@ -5,6 +5,8 @@ export function useToken() {
   useEffect(() => {
     const url = new URLSearchParams(window.location.hash);
     const token = url.get('#access_token');
+     /*  window.location.hash = '';*/
+     history.pushState('', document.title, window.location.pathname);
     if (token) {
       setAccessToken(token);
     }

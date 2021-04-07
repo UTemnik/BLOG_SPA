@@ -11,9 +11,9 @@ const PictureBlock = ({ imgSrc }: IPictureBlock) => {
       <a href="#blokId" className={s.linkBlock} />
       <img
         src={
-          !!imgSrc
-            ? imgSrc
-            : 'https://www.soyuz.ru/public/uploads/files/2/7397870/20191212152501852f43f3ba.jpg'
+          imgSrc === 'self'
+            ? 'https://www.soyuz.ru/public/uploads/files/2/7397870/20191212152501852f43f3ba.jpg'
+            : imgSrc
         }
         alt="picture"
         className={s.picture}

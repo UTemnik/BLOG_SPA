@@ -4,10 +4,11 @@ import s from './textContent.less';
 
 interface ITextContent {
   author: string;
+  authorImg: string;
   title?: string;
 }
 
-const TextContent = ({ author, title }: ITextContent) => {
+const TextContent = ({ author, title, authorImg }: ITextContent) => {
   return (
     <div className={s.textContent}>
       <h2 className={s.title}>
@@ -25,11 +26,7 @@ const TextContent = ({ author, title }: ITextContent) => {
             3 часа назад
           </div>
           <div className={s.author}>
-            <img
-              src="https://a.wattpad.com/useravatar/Raddaqk.256.592748.jpg"
-              alt="avatar"
-              className={s.authorPhoto}
-            />
+            <img src={authorImg} alt="avatar" className={s.authorPhoto} />
             <a href="#userId" className={s.authorName}>
               {author}
             </a>

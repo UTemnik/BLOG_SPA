@@ -18,6 +18,7 @@ const CardsList = () => {
                 imgSrc={elem.data['thumbnail']}
                 key={elem.data.id}
                 author={elem.data['author']}
+                authorImg={elem.data.all_awardings[1].icon_url}
                 title={elem.data['title']}
                 rating={elem.data['total_awards_received']}
               />
