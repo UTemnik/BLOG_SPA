@@ -25,13 +25,14 @@
     "superagent": "^6.1.0"
   },
   "devDependencies": {
-    "@types/react-router": "^5.1.13",
-    "@types/react-router-dom": "^5.1.7",
     "@types/classnames": "^2.2.11",
     "@types/enzyme": "^3.10.8",
     "@types/jest": "^26.0.22",
     "@types/node": "^14.14.10",
     "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.3",
+    "@types/react-router": "^5.1.13",
+    "@types/react-router-dom": "^5.1.7",
     "cross-env": "^7.0.2",
     "css-loader": "^5.0.1",
     "enzyme": "^3.11.0",

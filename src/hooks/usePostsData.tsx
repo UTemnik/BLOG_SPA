@@ -1,7 +1,7 @@
 import superagent from 'superagent';
 import { useContext, useEffect, useState } from 'react';
 import { tokenContext } from './../context/tokenContext';
-import {IPostsContextData} from './../context/PostsContext'
+import {IPostsContextData} from '../context/PostsContext'
 
 export function usePostsData() {
 

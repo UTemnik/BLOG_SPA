@@ -1,6 +1,7 @@
 import React from 'react';
 import { EIcons, Icon } from '../../../../../common/Icons/Icon';
 import s from './textContent.less';
+import Title from './Title/Title';
 
 interface ITextContent {
   author: string;
@@ -11,18 +12,13 @@ interface ITextContent {
 const TextContent = ({ author, title, authorImg }: ITextContent) => {
   return (
     <div className={s.textContent}>
-      <h2 className={s.title}>
-        <a href="#blokId" className={s.postLink}>
-          {title}
-        </a>
-      </h2>
+      <Title title={title} />
       <div>
         <div className={s.publicationInfo}>
           <div className={s.publicationTime}>
-            {' '}
             <span className={`${s.publicationTime} ${s.wordPublished}`}>
-              опубликовано
-            </span>{' '}
+              опубликовано{' '}
+            </span>
             3 часа назад
           </div>
           <div className={s.author}>

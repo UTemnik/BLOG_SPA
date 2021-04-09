@@ -1,6 +1,4 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import s from './content.less';
 
 interface IContentProps {
   children?: React.ReactNode;
