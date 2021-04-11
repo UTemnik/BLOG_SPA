@@ -12,7 +12,7 @@ interface ICard {
   rating: number;
 }
 
-const Card = ({ imgSrc, author, title, rating, authorImg }: ICard) => {
+export const Card = ({ imgSrc, author, title, rating, authorImg }: ICard) => {
   return (
     <li className={s.card}>
       <PictureBlock imgSrc={imgSrc} />
@@ -21,10 +21,11 @@ const Card = ({ imgSrc, author, title, rating, authorImg }: ICard) => {
         title={title}
         authorImg={authorImg}
         imgSrc={imgSrc}
+        rating={rating}
       />
       <Menu rating={rating} />
     </li>
   );
 };
 
-export default Card;
+

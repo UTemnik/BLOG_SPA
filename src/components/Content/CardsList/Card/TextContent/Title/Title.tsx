@@ -3,12 +3,14 @@ import Post from './../../../../../Post/Post';
 import s from './../textContent.less';
 
 interface ITitle {
+  author: string;
   title?: string;
   authorImg: string;
   imgSrc?: string;
+  rating: number;
 }
 
-const Title = ({ title, authorImg, imgSrc }: ITitle) => {
+const Title = ({ title, authorImg, imgSrc, rating, author }: ITitle) => {
   const [isModalOpened, setModalOpened] = useState(false);
 
   return (
@@ -24,6 +26,9 @@ const Title = ({ title, authorImg, imgSrc }: ITitle) => {
       </a>
       {isModalOpened && (
         <Post
+          author={author}
+          title={title}
+          rating={rating}
           imgSrc={imgSrc}
           authorImg={authorImg}
           setModalOpened={() => setModalOpened(false)}

@@ -1,17 +1,19 @@
 import React, { useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
-import { Rating } from '../Content/CardsList/Card/Menu/Rating/Rating';
-import PictureBlock from '../Content/CardsList/Card/PictureBlock/PictureBlock';
-import CommentForm from './CommentForm/CommentForm';
 import s from './post.less';
+import { PostContent } from './PostContent/PostContent';
+
 
 interface IPost {
+  title?: string;
   setModalOpened?: () => void;
+  author: string;
   authorImg: string;
   imgSrc?: string;
+  rating: number;
 }
 
-const Post = ({ setModalOpened, authorImg, imgSrc }: IPost) => {
+const Post = ({ setModalOpened, authorImg, imgSrc, rating, title, author }: IPost) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -38,11 +40,13 @@ const Post = ({ setModalOpened, authorImg, imgSrc }: IPost) => {
     <div className={s.container}>
       <div className={s.post} ref={ref}>
         <button className={s.close} onClick={setModalOpened}></button>
-        <div className={s.header}>
-          <PictureBlock imgSrc={imgSrc} />
-          <Rating rating={135} />
-        </div>
-        <CommentForm />
+        <PostContent
+          rating={rating}
+          title={title}
+          imgSrc={imgSrc}
+          author={author}
+          authorImg={authorImg}
+        />
       </div>
     </div>,
     node

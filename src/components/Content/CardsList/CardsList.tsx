@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import Card from './Card/Card';
+import {Card} from './Card/Card';
 import s from './cardsList.less';
 import {
   IPostsContextData,
@@ -12,7 +12,7 @@ const CardsList = () => {
   return (
     <ul className={s.cardsList}>
       {!!posts
-        ? posts.map((elem: IPostsContextData) => {       
+        ? posts.map((elem: IPostsContextData) => {
             return (
               <Card
                 imgSrc={elem.data['url']}

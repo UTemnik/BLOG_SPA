@@ -1,5 +1,5 @@
 import React from 'react';
-import Dropdown from './../../../../../common/Dropdown/Dropdown';
+import {Dropdown} from './../../../../../common/Dropdown/Dropdown';
 import DropdownMenu from './DropdownMenu/DropdowmMenu';
 import FunctionalPanel from './FunctionalPanel/FunctionalPanel';
 import s from './menu.less';

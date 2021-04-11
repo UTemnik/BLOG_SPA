@@ -1,5 +1,7 @@
 import React from 'react';
 import { EIcons, Icon } from '../../../../../common/Icons/Icon';
+import { Author } from './Author/Author';
+import { PublicationTime } from './PublicationTime/PublicationTime';
 import s from './textContent.less';
 import Title from './Title/Title';
 
@@ -8,26 +10,29 @@ interface ITextContent {
   authorImg: string;
   title?: string;
   imgSrc?: string;
+  rating: number;
 }
 
-const TextContent = ({ author, title, authorImg, imgSrc }: ITextContent) => {
+const TextContent = ({
+  author,
+  title,
+  authorImg,
+  imgSrc,
+  rating,
+}: ITextContent) => {
   return (
     <div className={s.textContent}>
-      <Title title={title} authorImg={authorImg} imgSrc={imgSrc} />
+      <Title
+        author={author}
+        title={title}
+        authorImg={authorImg}
+        imgSrc={imgSrc}
+        rating={rating}
+      />
       <div>
         <div className={s.publicationInfo}>
-          <div className={s.publicationTime}>
-            <span className={`${s.publicationTime} ${s.wordPublished}`}>
-              опубликовано{' '}
-            </span>
-            3 часа назад
-          </div>
-          <div className={s.author}>
-            <img src={authorImg} alt="avatar" className={s.authorPhoto} />
-            <a href="#userId" className={s.authorName}>
-              {author}
-            </a>
-          </div>
+          <PublicationTime />
+          <Author author={author} authorImg={authorImg}  />
         </div>
         <div className={s.publicationViews}>
           <Icon name={EIcons.views} size={[16, 11]} />

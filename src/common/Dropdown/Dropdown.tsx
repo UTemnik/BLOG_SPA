@@ -11,7 +11,7 @@ interface IDropdownProps {
 
 const NOOP = () => {};
 
-const Dropdown = ({
+export const Dropdown = ({
 	button,
 	children,
 	isOpen,
@@ -46,4 +46,3 @@ const Dropdown = ({
 	);
 };
 
-export default Dropdown;
