@@ -31,7 +31,7 @@ const Title = ({ title, authorImg, imgSrc, rating, author }: ITitle) => {
           rating={rating}
           imgSrc={imgSrc}
           authorImg={authorImg}
-          setModalOpened={() => setModalOpened(false)}
+          setModalOpened={setModalOpened}
         />
       )}
     </h2>

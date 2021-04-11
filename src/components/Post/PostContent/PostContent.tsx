@@ -1,10 +1,11 @@
 import React from 'react';
-import { onError } from '../../../common/fc/onError';
+import { onError } from '../../../utils/onError';
 import CommentForm from '../CommentForm/CommentForm';
 import { Rating } from './../../Content/CardsList/Card/Menu/Rating/Rating';
 import { Author } from './../../Content/CardsList/Card/TextContent/Author/Author';
 import { PublicationTime } from './../../Content/CardsList/Card/TextContent/PublicationTime/PublicationTime';
 import s from './postContent.less';
+import { OptionsMenu } from './OptionsMenu/OptionsMenu';
 
 interface IPostContent {
   rating: number;
@@ -21,9 +22,8 @@ export const PostContent = ({
   authorImg,
   imgSrc,
 }: IPostContent) => {
-
   return (
-    <>
+    <div className={s.wrapper}>
       <div className={s.header}>
         <div className={s.statistics}>
           <Rating rating={rating} />
@@ -37,7 +37,8 @@ export const PostContent = ({
         </div>
       </div>
       <img src={imgSrc} alt="picture" className={s.picture} onError={onError} />
+      <OptionsMenu />
       <CommentForm />
-    </>
+    </div>
   );
 };

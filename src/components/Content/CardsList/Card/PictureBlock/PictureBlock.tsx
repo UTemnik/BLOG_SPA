@@ -1,5 +1,5 @@
 import React from 'react';
-import { onError } from '../../../../../common/fc/onError';
+import { onError } from '../../../../../utils/onError';
 import s from './pictureBlock.less';
 
 interface IPictureBlock {
