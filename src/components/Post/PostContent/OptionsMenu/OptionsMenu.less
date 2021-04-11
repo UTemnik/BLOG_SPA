@@ -1,0 +1,26 @@
+.optionsMenu {
+  display: flex;
+  border-top: 1px solid var(--greyD9);
+  padding: 15px 0 37px 0;
+  & li {
+    display: flex;
+    color: var(--grey99);
+    margin-top: 6px;
+    padding-bottom: 6px;
+    &:hover {
+      color: var(--orange);
+      & svg path {
+        fill: var(--orange);
+      }
+    }
+    & svg {
+      margin-right: 5px;
+    }
+  }
+  & li:not(:last-child) {
+    margin-right: 29px;
+  }
+  & li:last-child {
+    margin-left: 60px;
+  }
+}
