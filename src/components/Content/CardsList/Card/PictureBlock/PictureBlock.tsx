@@ -1,15 +1,12 @@
 import React from 'react';
+import { onError } from '../../../../../common/fc/onError';
 import s from './pictureBlock.less';
 
 interface IPictureBlock {
   imgSrc?: string;
 }
 
-const PictureBlock = ({ imgSrc }: IPictureBlock) => {
-  const onError = (event: React.ChangeEvent<HTMLImageElement>): void => {
-    event.target.src =
-      'https://www.meme-arsenal.com/memes/e0f849e6a9012d248cb008a07ac49a93.jpg';
-  };
+const PictureBlock = ({ imgSrc}: IPictureBlock) => {
 
   return (
     <div className={s.wrapper}>

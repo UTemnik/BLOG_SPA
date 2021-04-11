@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import s from './post.less';
 import { PostContent } from './PostContent/PostContent';
 
-
 interface IPost {
   title?: string;
   setModalOpened?: () => void;

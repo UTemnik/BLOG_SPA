@@ -1,5 +1,5 @@
 import React from 'react';
-import PictureBlock from '../../Content/CardsList/Card/PictureBlock/PictureBlock';
+import { onError } from '../../../common/fc/onError';
 import CommentForm from '../CommentForm/CommentForm';
 import { Rating } from './../../Content/CardsList/Card/Menu/Rating/Rating';
 import { Author } from './../../Content/CardsList/Card/TextContent/Author/Author';
@@ -25,12 +25,18 @@ export const PostContent = ({
   return (
     <>
       <div className={s.header}>
-        <Rating rating={rating} />
-        <h2>{title}</h2>
-        <PublicationTime />
-        <Author author={author} authorImg={authorImg} />
+        <div className={s.statistics}>
+          <Rating rating={rating} />
+        </div>
+        <div>
+          <h2 className={s.title}>{title}</h2>
+          <div className={s.publicationInfo}>
+            <PublicationTime />
+            <Author author={author} authorImg={authorImg} />
+          </div>
+        </div>
       </div>
-      <PictureBlock imgSrc={imgSrc} />
+      <img src={imgSrc} alt="picture" className={s.picture} onError={onError} />
       <CommentForm />
     </>
   );

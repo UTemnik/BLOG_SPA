@@ -14,7 +14,6 @@
   "license": "ISC",
   "dependencies": {
     "@types/superagent": "^4.1.10",
-    "classnames": "^2.2.6",
     "less": "^3.12.2",
     "less-loader": "^7.1.0",
     "react": "^16.13.0",
@@ -25,7 +24,6 @@
     "superagent": "^6.1.0"
   },
   "devDependencies": {
-    "@types/classnames": "^2.2.11",
     "@types/enzyme": "^3.10.8",
     "@types/jest": "^26.0.22",
     "@types/node": "^14.14.10",
