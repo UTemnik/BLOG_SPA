@@ -1,13 +1,17 @@
 import React, { useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
+import { Rating } from '../Content/CardsList/Card/Menu/Rating/Rating';
+import PictureBlock from '../Content/CardsList/Card/PictureBlock/PictureBlock';
 import CommentForm from './CommentForm/CommentForm';
 import s from './post.less';
 
 interface IPost {
   setModalOpened?: () => void;
+  authorImg: string;
+  imgSrc?: string;
 }
 
-const Post = ({ setModalOpened }: IPost) => {
+const Post = ({ setModalOpened, authorImg, imgSrc }: IPost) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -33,22 +37,11 @@ const Post = ({ setModalOpened }: IPost) => {
   return ReactDOM.createPortal(
     <div className={s.container}>
       <div className={s.post} ref={ref}>
-        <button className={s.close}></button>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
-          hic iure dolor dolorum voluptate tenetur vero aperiam et, omnis ex
-          maiores facilis eveniet nam laboriosam laborum vitae atque magnam
-          dolores? Cupiditate commodi repellendus voluptate nostrum suscipit
-          voluptatem quam ipsum fugit eaque adipisci porro nesciunt laudantium
-          dicta in vero, tenetur impedit ullam dolorem amet. Qui, dolores! Fuga,
-          recusandae. Officiis tempore aspernatur quae quis delectus possimus
-          omnis eveniet itaque unde. Nulla ipsum, dolor voluptate quos ducimus
-          dignissimos pariatur accusamus ipsam vel ut officia quis harum.
-          Provident fuga unde explicabo quidem numquam natus, id cupiditate iste
-          asperiores a velit eaque doloribus saepe necessitatibus, suscipit nemo
-          neque aspernatur odio. Ipsa dicta aspernatur esse laboriosam similique
-          at voluptates? Debitis harum totam expedita blanditiis repellendus
-        </p>
+        <button className={s.close} onClick={setModalOpened}></button>
+        <div className={s.header}>
+          <PictureBlock imgSrc={imgSrc} />
+          <Rating rating={135} />
+        </div>
         <CommentForm />
       </div>
     </div>,

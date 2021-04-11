@@ -4,6 +4,7 @@ import DropdownMenu from './DropdownMenu/DropdowmMenu';
 import FunctionalPanel from './FunctionalPanel/FunctionalPanel';
 import s from './menu.less';
 import { EIcons, Icon } from '../../../../../common/Icons/Icon';
+import { Rating } from './Rating/Rating';
 
 interface IMenu {
   rating: number;
@@ -24,17 +25,7 @@ const Menu = ({ rating }: IMenu) => {
           <DropdownMenu />
         </Dropdown>
       </div>
-      <div className={s.statistics}>
-        <button>
-          <Icon name={EIcons.up} size={[19, 10]} className={s.upCounter} />
-        </button>
-
-        <span className={s.appraisal}>{rating}</span>
-        <button>
-          <Icon name={EIcons.down} size={[19, 10]} className={s.downCounter} />
-        </button>
-      </div>
-
+      <Rating rating={rating} />
       <FunctionalPanel />
     </div>
   );

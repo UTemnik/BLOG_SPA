@@ -7,12 +7,13 @@ interface ITextContent {
   author: string;
   authorImg: string;
   title?: string;
+  imgSrc?: string;
 }
 
-const TextContent = ({ author, title, authorImg }: ITextContent) => {
+const TextContent = ({ author, title, authorImg, imgSrc }: ITextContent) => {
   return (
     <div className={s.textContent}>
-      <Title title={title} />
+      <Title title={title} authorImg={authorImg} imgSrc={imgSrc} />
       <div>
         <div className={s.publicationInfo}>
           <div className={s.publicationTime}>

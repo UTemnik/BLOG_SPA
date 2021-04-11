@@ -1,0 +1,44 @@
+.statistics {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	@media (max-width: 600px) {
+		flex-direction: row;
+	}
+}
+
+.upCounter {
+	&:hover path {
+		fill: var(--green);
+	}
+
+	@media (max-width: 600px) {
+		margin-right: 5px;
+		& path {
+			fill: var(--greyC4);
+		}
+	}
+}
+
+.downCounter {
+	&:hover path {
+		fill: #cc3361;
+	}
+
+	@media (max-width: 600px) {
+		margin-left: 5px;
+		& path {
+			fill: var(--greyC4);
+		}
+	}
+}
+
+.appraisal {
+	padding: 7px 0;
+	@media (max-width: 600px) {
+		padding: 0;
+		font-size: 12px;
+		color: var(--greyC4);
+		font-weight: 500;
+	}
+}

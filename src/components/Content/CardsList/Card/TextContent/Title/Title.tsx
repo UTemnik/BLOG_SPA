@@ -4,9 +4,11 @@ import s from './../textContent.less';
 
 interface ITitle {
   title?: string;
+  authorImg: string;
+  imgSrc?: string;
 }
 
-const Title = ({ title }: ITitle) => {
+const Title = ({ title, authorImg, imgSrc }: ITitle) => {
   const [isModalOpened, setModalOpened] = useState(false);
 
   return (
@@ -20,7 +22,13 @@ const Title = ({ title }: ITitle) => {
       >
         {title}
       </a>
-      {isModalOpened && <Post setModalOpened={() => setModalOpened(false)} />}
+      {isModalOpened && (
+        <Post
+          imgSrc={imgSrc}
+          authorImg={authorImg}
+          setModalOpened={() => setModalOpened(false)}
+        />
+      )}
     </h2>
   );
 };

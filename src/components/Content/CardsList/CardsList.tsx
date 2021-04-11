@@ -12,10 +12,10 @@ const CardsList = () => {
   return (
     <ul className={s.cardsList}>
       {!!posts
-        ? posts.map((elem: IPostsContextData) => {
+        ? posts.map((elem: IPostsContextData) => {       
             return (
               <Card
-                imgSrc={elem.data['thumbnail']}
+                imgSrc={elem.data['url']}
                 key={elem.data.id}
                 author={elem.data['author']}
                 authorImg={elem.data.all_awardings[1].icon_url}

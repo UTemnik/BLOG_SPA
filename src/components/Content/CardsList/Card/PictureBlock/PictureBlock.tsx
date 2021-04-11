@@ -6,15 +6,18 @@ interface IPictureBlock {
 }
 
 const PictureBlock = ({ imgSrc }: IPictureBlock) => {
+  const onError = (event: React.ChangeEvent<HTMLImageElement>): void => {
+    event.target.src =
+      'https://www.meme-arsenal.com/memes/e0f849e6a9012d248cb008a07ac49a93.jpg';
+  };
+
   return (
     <div className={s.wrapper}>
       <a href="#blokId" className={s.linkBlock} />
       <img
-        src={
-          imgSrc === 'default'
-            ? 'https://htstatic.imgsmail.ru/pic_image/7ae8d4d537fa85a2b10d1869d0661c4f/840/745/1668925/'
-            : imgSrc
-        }
+        id={imgSrc}
+        src={imgSrc}
+        onError={onError}
         alt="picture"
         className={s.picture}
       />
