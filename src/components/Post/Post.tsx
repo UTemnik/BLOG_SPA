@@ -6,14 +6,15 @@ import { PostContent } from './PostContent/PostContent';
 
 interface IPost {
   title?: string;
-  setModalOpened: (val : boolean) => void;
+  setModalOpened: (val: boolean) => void;
   author: string;
   authorImg: string;
   imgSrc?: string;
   rating: number;
+  comments: { [key in string]: string }[];
 }
 
-const Post = ({ setModalOpened, authorImg, imgSrc, rating, title, author }: IPost) => {
+const Post = ({ setModalOpened, authorImg, imgSrc, rating, title, author, comments }: IPost) => {
   const ref = useClickOutsideElem(setModalOpened);
   const node = document.querySelector('#modal_root');
   if (!node) return null;
@@ -23,6 +24,7 @@ const Post = ({ setModalOpened, authorImg, imgSrc, rating, title, author }: IPos
       <div className={s.post} ref={ref}>
         <button className={s.close} onClick={() => setModalOpened(false)}></button>
         <PostContent
+          comments={comments}
           rating={rating}
           title={title}
           imgSrc={imgSrc}

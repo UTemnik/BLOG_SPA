@@ -8,9 +8,10 @@ interface ITitle {
   authorImg: string;
   imgSrc?: string;
   rating: number;
+  comments: { [key in string]: string }[];
 }
 
-const Title = ({ title, authorImg, imgSrc, rating, author }: ITitle) => {
+const Title = ({ title, authorImg, imgSrc, rating, author, comments }: ITitle) => {
   const [isModalOpened, setModalOpened] = useState(false);
 
   return (
@@ -26,6 +27,7 @@ const Title = ({ title, authorImg, imgSrc, rating, author }: ITitle) => {
       </a>
       {isModalOpened && (
         <Post
+          comments={comments}
           author={author}
           title={title}
           rating={rating}

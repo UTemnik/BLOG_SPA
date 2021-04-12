@@ -10,9 +10,11 @@ interface ICard {
   author: string;
   authorImg: string;
   rating: number;
+  comments : {[key in string]:string}[];
 }
 
-export const Card = ({ imgSrc, author, title, rating, authorImg }: ICard) => {
+export const Card = ({ imgSrc, author, title, rating, authorImg, comments }: ICard) => {
+   
   return (
     <li className={s.card}>
       <PictureBlock imgSrc={imgSrc} />
@@ -22,6 +24,7 @@ export const Card = ({ imgSrc, author, title, rating, authorImg }: ICard) => {
         authorImg={authorImg}
         imgSrc={imgSrc}
         rating={rating}
+        comments={comments}
       />
       <Menu rating={rating} />
     </li>

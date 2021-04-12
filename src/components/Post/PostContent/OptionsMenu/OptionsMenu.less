@@ -2,6 +2,12 @@
   display: flex;
   border-top: 1px solid var(--greyD9);
   padding: 15px 0 37px 0;
+      @media (max-width: 1024px) {
+        padding: 15px 0 15px 0;
+    }
+  @media (max-width: 1024px) {
+    display: block;
+  }
   & li {
     display: flex;
     color: var(--grey99);
@@ -22,5 +28,8 @@
   }
   & li:last-child {
     margin-left: 60px;
+    @media (max-width: 1024px) {
+      margin-left: 0;
+    }
   }
 }

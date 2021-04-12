@@ -10,11 +10,12 @@ const CardsList = () => {
   const posts = useContext(postsContext);
 
   return (
-    <ul className={s.cardsList}>
+    <ul className={s.cardsList}>    
       {!!posts
-        ? posts.map((elem: IPostsContextData) => {
+        ? posts.map((elem: IPostsContextData) => {     
             return (
               <Card
+                comments={elem.data['all_awardings']}
                 imgSrc={elem.data['url']}
                 key={elem.data.id}
                 author={elem.data['author']}

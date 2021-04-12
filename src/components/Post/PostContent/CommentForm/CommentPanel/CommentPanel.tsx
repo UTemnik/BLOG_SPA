@@ -1,5 +1,5 @@
 import React from 'react';
-import { EIcons, Icon } from '../../../../common/Icons/Icon';
+import { EIcons, Icon } from '../../../../../common/Icons/Icon';
 import s from './commentPanel.less';
 
 export const CommentPanel = () => {
@@ -43,4 +43,4 @@ export const CommentPanel = () => {
       </li>
     </ul>
   );
-}
+};

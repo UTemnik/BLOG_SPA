@@ -1,6 +1,7 @@
 import React from 'react';
 import { EIcons, Icon } from '../../../../common/Icons/Icon';
-import s from './optionsMenu.less'
+import s from './optionsMenu.less';
+
 
 export const OptionsMenu = () => {
   return (

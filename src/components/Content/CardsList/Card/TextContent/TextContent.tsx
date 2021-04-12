@@ -11,6 +11,7 @@ interface ITextContent {
   title?: string;
   imgSrc?: string;
   rating: number;
+  comments: { [key in string]: string }[];
 }
 
 const TextContent = ({
@@ -19,6 +20,7 @@ const TextContent = ({
   authorImg,
   imgSrc,
   rating,
+  comments
 }: ITextContent) => {
   return (
     <div className={s.textContent}>
@@ -28,10 +30,11 @@ const TextContent = ({
         authorImg={authorImg}
         imgSrc={imgSrc}
         rating={rating}
+        comments={comments}
       />
       <div>
         <div className={s.publicationInfo}>
-          <PublicationTime />
+          <PublicationTime showPublic={true} />
           <Author author={author} authorImg={authorImg}  />
         </div>
         <div className={s.publicationViews}>

@@ -1,13 +1,19 @@
 import React from 'react';
-import s from './publicationTime.less'
+import s from './publicationTime.less';
 
-export const PublicationTime = () => {
+interface IPublicationTime {
+  showPublic: boolean;
+}
+
+export const PublicationTime = ({ showPublic }: IPublicationTime) => {
   return (
     <div className={s.publicationTime}>
-      <span className={`${s.publicationTime} ${s.wordPublished}`}>
-        опубликовано{' '}
-      </span>
+      {showPublic && (
+        <span className={`${s.publicationTime} ${s.wordPublished}`}>
+          опубликовано{' '}
+        </span>
+      )}
       3 часа назад
     </div>
   );
-}
+};

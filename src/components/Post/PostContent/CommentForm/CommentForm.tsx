@@ -4,14 +4,18 @@ import React, {
   useContext,
   useEffect,
   useRef,
+  useState,
 } from 'react';
-import { commentContext } from './../../../context/commentContext';
+import { commentContext } from '../../../../context/commentContext';
 import s from './commentForm.less';
 import { CommentPanel } from './CommentPanel/CommentPanel';
 
-const CommentForm = () => {
+interface ICommentForm {
+  name : string;
+}
+
+const CommentForm = ({name} : ICommentForm) => {
   const { value, onChange } = useContext(commentContext);
-  const name = 'Костик, ';
   const myRef = useRef<HTMLTextAreaElement>(null);
 
   const handleSubmit = (event: FormEvent) => {
@@ -24,7 +28,7 @@ const CommentForm = () => {
     console.log(event.target.value);
   };*/
 
-  /*  useEffect(() => {
+ /*   useEffect(() => {
     if (myRef.current) {
       myRef.current?.focus();
     }
