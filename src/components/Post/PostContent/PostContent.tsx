@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { onError } from '../../../utils/onError';
 import CommentForm from '../CommentForm/CommentForm';
 import { Rating } from './../../Content/CardsList/Card/Menu/Rating/Rating';
@@ -6,6 +6,7 @@ import { Author } from './../../Content/CardsList/Card/TextContent/Author/Author
 import { PublicationTime } from './../../Content/CardsList/Card/TextContent/PublicationTime/PublicationTime';
 import s from './postContent.less';
 import { OptionsMenu } from './OptionsMenu/OptionsMenu';
+import SortBlock from '../../Header/SortBlock/SortBlock';
 
 interface IPostContent {
   rating: number;
@@ -22,6 +23,8 @@ export const PostContent = ({
   authorImg,
   imgSrc,
 }: IPostContent) => {
+  const [commentFormIsOpen, setCommentFormIsOpen] = useState(false);
+
   return (
     <div className={s.wrapper}>
       <div className={s.header}>
@@ -38,7 +41,12 @@ export const PostContent = ({
       </div>
       <img src={imgSrc} alt="picture" className={s.picture} onError={onError} />
       <OptionsMenu />
-      <CommentForm />
+      {commentFormIsOpen && <CommentForm />}
+
+      <div className={s.sortBlock}>
+        <span>Сортировать по :</span>
+        <SortBlock showingIcon={false} />
+      </div>
     </div>
   );
 };

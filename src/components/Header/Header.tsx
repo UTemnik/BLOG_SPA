@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <header className={s.header}>
-      <SortBlock />
+      <SortBlock showingIcon={true} />
       <ThreadTitle />
       <Messages />
       <SearchBlock />

@@ -2,10 +2,14 @@ import React from 'react';
 import { EIcons, Icon } from '../../../common/Icons/Icon';
 import s from './sortBlock.less';
 
-const SortBlock = () => {
+interface ISortBlock {
+  showingIcon : boolean; 
+}
+
+const SortBlock = ({showingIcon} : ISortBlock) => {
 	return (
 		<div className={s.sortBlock}>
-			<Icon name={EIcons.rocket} size={[16, 14]} />
+			{showingIcon && <Icon name={EIcons.rocket} size={[16, 14]} />}
 			<div className={s.selectBlock}>
 				<select className={s.select}>
 					<option>Лучшие</option>
